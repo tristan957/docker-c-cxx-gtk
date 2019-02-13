@@ -1,8 +1,8 @@
-FROM gcc:8
+FROM tristan957/c-cxx:latest
 
-RUN apt-get update; \
-	apt-get upgrade; \
-	apt-get install -y --no-install-recommends \
-		libgtk-3-dev \
+RUN dnf update; \
+	dnf upgrade; \
+	dnf install -y \
+		gtk+-devel \
 		; \
-	rm -rf /var/lib/apt/lists/*;
+	dnf clean;
