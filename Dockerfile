@@ -5,4 +5,4 @@ RUN dnf update; \
 	dnf install -y \
 		gtk+-devel \
 		; \
-	dnf clean;
+	dnf clean all;
